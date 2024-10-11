@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.OtpVerificationActivity">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Otp Verification"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textSize="@dimen/_20sdp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/edt_one"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:autofillHints="password"
+            android:background="@drawable/custom_bg_edt_pin"
+            android:focusable="false"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/edt_two"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:autofillHints="password"
+            android:background="@drawable/custom_bg_edt_pin"
+            android:focusable="false"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/edt_three"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:autofillHints="password"
+            android:background="@drawable/custom_bg_edt_pin"
+            android:focusable="false"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/edt_four"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:autofillHints="password"
+            android:background="@drawable/custom_bg_edt_pin"
+            android:focusable="false"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_btn_background"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_15sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_bg_transparent"
+            android:text="Verfy Otp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/edit_text_color" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

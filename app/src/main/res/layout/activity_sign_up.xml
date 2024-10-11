@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SignUpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Sign Up"
+          android:paddingVertical="@dimen/_10sdp"
+          android:paddingHorizontal="@dimen/_10sdp"
+          android:textColor="@color/black"
+          android:textSize="@dimen/_20sdp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_background"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_15sdp">
+
+            <EditText
+                android:id="@+id/edt_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:autofillHints="username"
+                android:background="@drawable/custom_bg_transparent"
+                android:hint="Full Name"
+                android:inputType="textPhonetic|textCapWords"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/edit_text_color" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_background"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_15sdp">
+
+            <EditText
+                android:id="@+id/edt_mobile_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:autofillHints="username"
+                android:background="@drawable/custom_bg_transparent"
+                android:hint="Mobile No"
+                android:inputType="textPhonetic|textCapWords"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/edit_text_color" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_btn_background"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_15sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_bg_transparent"
+                android:text="SignUp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/edit_text_color" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
