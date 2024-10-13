@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
 
 plugins {
     alias(libs.plugins.android.application)
@@ -35,8 +36,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
-        viewBinding
-        buildConfig 
+        viewBinding = true
     }
 }
 
@@ -53,4 +53,10 @@ dependencies {
     implementation (libs.sdp.android)
     implementation (libs.circleimageview)
 
+    // Retrofit
+    implementation( libs.retrofit)
+    implementation( libs.logging.interceptor)
+
+    // Gson
+    implementation (libs.converter.gson)
 }
