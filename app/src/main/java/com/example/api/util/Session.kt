@@ -1,4 +1,4 @@
-package com.example.onlinegroceries.util
+package com.example.api.util
 
 import android.content.Context
 import android.content.Intent

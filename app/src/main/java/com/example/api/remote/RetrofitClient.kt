@@ -1,6 +1,6 @@
 package com.example.onlinegroceries.remote
 
-import com.example.onlinegroceries.util.Constants
+import com.example.api.util.Constants
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

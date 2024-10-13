@@ -4,16 +4,11 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.api.MainActivity
-import com.example.api.R
 import com.example.api.databinding.ActivitySignUpBinding
 import com.example.api.model.SignUpModel
 import com.example.onlinegroceries.remote.RetrofitClient
-import com.example.onlinegroceries.util.popupDialog
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -86,13 +81,7 @@ class SignUpActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<SignUpModel>, t: Throwable) {
-                popupDialog(
-                    applicationContext,
-                    "Request to server failed! Please try again after some time. ${t.cause}",
-                    "Request Failed!",
-                    "Ok",
-                    true
-                )
+
             }
         })
     }
