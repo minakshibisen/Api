@@ -76,8 +76,32 @@
 
         </RelativeLayout>
 
-
         <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_background"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_15sdp">
+
+            <EditText
+                android:id="@+id/edt_refrel_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:autofillHints="username"
+                android:background="@drawable/custom_bg_transparent"
+                android:hint="Referral code(Optional)"
+                android:inputType="textPhonetic|textCapWords"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/edit_text_color" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/signUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_btn_background"

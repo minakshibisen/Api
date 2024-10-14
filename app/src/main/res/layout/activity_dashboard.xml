@@ -43,5 +43,22 @@
         android:background="@color/light_grey"/>
 
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/white"
+        app:cardBackgroundColor="#fff">
 
+<!--        <com.denzcoskun.imageslider.ImageSlider-->
+<!--            android:id="@+id/image_slider1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:iss_auto_cycle="true"-->
+<!--            app:iss_delay="0"-->
+<!--            app:iss_period="1000" />-->
+
+    </androidx.cardview.widget.CardView>
 </LinearLayout>
