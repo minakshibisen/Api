@@ -35,7 +35,7 @@ class SignUpActivity : AppCompatActivity() {
                 binding.edtMobileNo.requestFocus()
 
             } else {
-                signup(phone)
+               // signup(phone)
             }
         }
 
