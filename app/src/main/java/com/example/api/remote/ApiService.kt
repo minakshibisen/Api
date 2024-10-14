@@ -1,4 +1,4 @@
-package com.example.onlinegroceries.remote
+package com.example.api.remote
 
 
 import com.example.api.model.SignUpModel
@@ -12,5 +12,6 @@ interface ApiService {
 
     @POST(Constants.signUp)
     fun userSignUp(@Body body: MutableMap<String, String?>): Call<SignUpModel>
+
 
 }

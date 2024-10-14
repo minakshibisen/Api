@@ -25,6 +25,7 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(binding.root)
         val phone: String? = intent.getStringExtra("phone")
 
+
         binding.signUp.setOnClickListener {
             if (binding.edtMobileNo.text.isNullOrEmpty() && binding.edtUserName.text.isNullOrEmpty()
             ) {
@@ -34,55 +35,29 @@ class SignUpActivity : AppCompatActivity() {
                 binding.edtMobileNo.requestFocus()
 
             } else {
-                signup(phone )
+                signup(phone)
             }
         }
 
-
-
     }
-    private fun signup(phone: String?) {
-        val map: MutableMap<String, String?> = HashMap()
-        map["phone"] = phone
 
-        RetrofitClient.getInstance().userSignUp(
-            map
-        ).enqueue(object : Callback<SignUpModel> {
-            @SuppressLint("SuspiciousIndentation")
-            override fun onResponse(
-                call: Call<SignUpModel>,
-                response: Response<SignUpModel>,
-            ) {
-                if (response.code() == 200) {
-                    if (response.body() != null) {
-                        if (response.body()!!.result) {
-                            val data = response.body()!!.data
+    private fun signup() {
 
+        RetrofitClient.getInstance().userSignUp().enqueue(object :Callback<SignUpModel>{
+            override fun onResponse(call: Call<SignUpModel>, response: Response<SignUpModel>) {
+                if (response.code()== 200) {
+                    if (response.body()!=null){
 
-                            startActivity(
-                                Intent(
-                                    this@SignUpActivity, MainActivity::class.java
-                                )
-                            )
+                    }
 
-                        } else {
-                            Toast.makeText(
-                                this@SignUpActivity, response.body()!!.msg, Toast.LENGTH_SHORT
-                            ).show()
-                        }
-
-
-                    } else Toast.makeText(
-                        this@SignUpActivity, response.body()!!.msg, Toast.LENGTH_SHORT
-                    ).show()
-                } else Toast.makeText(
-                    this@SignUpActivity, response.body()!!.msg, Toast.LENGTH_SHORT
-                ).show()
+                }
             }
 
-            override fun onFailure(call: Call<SignUpModel>, t: Throwable) {
+            override fun onFailure(call: Call<SignUpModel>, throwable: Throwable) {
 
             }
+
         })
     }
+
 }
