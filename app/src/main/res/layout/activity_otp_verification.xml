@@ -9,17 +9,15 @@
     tools:context=".ui.OtpVerificationActivity">
 
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Otp Verification"
-        android:paddingVertical="@dimen/_10sdp"
-        android:paddingHorizontal="@dimen/_10sdp"
-        android:textColor="@color/black"
         android:layout_gravity="center"
-        android:textSize="@dimen/_20sdp"/>
-
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Otp Verification"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp" />
 
 
     <LinearLayout
@@ -89,23 +87,23 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/edit_btn_background"
-        android:orientation="horizontal"
         android:layout_marginHorizontal="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/edit_btn_background"
+        android:orientation="horizontal"
         android:paddingHorizontal="@dimen/_10sdp"
         android:paddingVertical="@dimen/_15sdp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
             android:background="@drawable/custom_bg_transparent"
             android:text="Verfy Otp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerInParent="true"
-            android:textSize="@dimen/_15sdp"
             android:textColor="@color/white"
-            android:textColorHint="@color/edit_text_color" />
+            android:textColorHint="@color/edit_text_color"
+            android:textSize="@dimen/_15sdp" />
 
     </RelativeLayout>
 
