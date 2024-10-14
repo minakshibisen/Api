@@ -1,11 +1,9 @@
 package com.example.api.ui
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.api.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.api.adapter.DashboardAdapter
 import com.example.api.databinding.ActivityDashboardBinding
 
 class DashboardActivity : AppCompatActivity() {
@@ -15,6 +13,9 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.recyclerDashboard.adapter = DashboardAdapter(this)
+        binding.recyclerDashboard.layoutManager=LinearLayoutManager(this)
 
     }
 }

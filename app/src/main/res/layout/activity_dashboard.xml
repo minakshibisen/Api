@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -61,4 +62,14 @@
 <!--            app:iss_period="1000" />-->
 
     </androidx.cardview.widget.CardView>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:layout_marginVertical="@dimen/_5sdp"
+    android:id="@+id/recycler_dashboard"/>
+
+
+
 </LinearLayout>

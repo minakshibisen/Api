@@ -60,8 +60,4 @@ dependencies {
     // Gson
     implementation (libs.converter.gson)
 
-
-    //image slider
-    implementation( libs.imageslideshow)
-
 }
