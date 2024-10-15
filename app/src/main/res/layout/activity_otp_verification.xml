@@ -15,7 +15,7 @@
         android:layout_gravity="center"
         android:paddingHorizontal="@dimen/_10sdp"
         android:paddingVertical="@dimen/_10sdp"
-        android:text="Otp Verification"
+        android:text="@string/otp_verification"
         android:textColor="@color/black"
         android:textSize="@dimen/_20sdp" />
 
@@ -27,7 +27,7 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <TextView
+        <EditText
             android:id="@+id/edt_one"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
@@ -40,7 +40,7 @@
             android:textAlignment="center"
             android:textColor="@color/white" />
 
-        <TextView
+        <EditText
             android:id="@+id/edt_two"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
@@ -54,7 +54,7 @@
             android:textAlignment="center"
             android:textColor="@color/white" />
 
-        <TextView
+        <EditText
             android:id="@+id/edt_three"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
@@ -68,7 +68,7 @@
             android:textAlignment="center"
             android:textColor="@color/white" />
 
-        <TextView
+        <EditText
             android:id="@+id/edt_four"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"

@@ -1,11 +1,9 @@
 package com.example.api.ui
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.api.MainActivity
 import com.example.api.databinding.ActivitySignUpBinding
 import com.example.api.model.SignUpModel
 import com.example.onlinegroceries.remote.RetrofitClient
@@ -35,20 +33,36 @@ class SignUpActivity : AppCompatActivity() {
                 binding.edtMobileNo.requestFocus()
 
             } else {
-               // signup(phone)
+                signup()
             }
         }
 
     }
 
     private fun signup() {
-
-        RetrofitClient.getInstance().userSignUp().enqueue(object :Callback<SignUpModel>{
+        val map = mutableMapOf(
+            "phone" to "7694930451",
+            "name" to "name",
+        )
+        RetrofitClient.getInstance().userSignUp(map).enqueue(object :Callback<SignUpModel>{
             override fun onResponse(call: Call<SignUpModel>, response: Response<SignUpModel>) {
                 if (response.code()== 200) {
                     if (response.body()!=null){
 
+                        if (response.isSuccessful){
+                            startActivity(Intent(this@SignUpActivity,OtpVerificationActivity::class.java))
+
+
+                        }else{
+                            Log.d("SignUpSuccess", "Sign-up successful: ${response.message()}")
+                        }
+                    }else{
+                        Log.e("SignUpError", "Response body is null")
+
                     }
+
+                }else{
+                    Log.e("SignUpError", "Sign-up failed with code: ${response.code()} and message: ${response.message()}")
 
                 }
             }
