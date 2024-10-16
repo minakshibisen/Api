@@ -26,11 +26,6 @@ class DashboardAdapter(dashboardActivity: DashboardActivity) : RecyclerView.Adap
         return 0
     }
 
-    class Viewholder (binding: ItemDashboardBinding):RecyclerView.ViewHolder(binding.root){
-        var binding: ItemDashboardBinding
-
-        init {
-            this.binding = binding
-        }
+    class Viewholder(var binding: ItemDashboardBinding):RecyclerView.ViewHolder(binding.root){
     }
 }
