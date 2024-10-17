@@ -26,10 +26,10 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="${MAP_API_KEY}" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".ui.OtpVerificationActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
@@ -46,10 +46,10 @@
             android:name=".ui.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.SignUpActivity"
+            android:name=".MapsActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.OtpVerificationActivity"
+            android:name=".ui.SignUpActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

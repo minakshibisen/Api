@@ -66,4 +66,7 @@ dependencies {
     implementation (libs.androidx.room.runtime)
     annotationProcessor (libs.androidx.room.compiler)
     implementation (libs.androidx.room.ktx)
+
+    implementation ("com.google.android.gms:play-services-maps:18.1.0")
+    implementation ("androidx.fragment:fragment:1.5.0")
 }

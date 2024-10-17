@@ -1,5 +1,6 @@
 package com.example.api.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.api.databinding.ActivityLoginBinding
@@ -24,34 +25,36 @@ LoginActivity : AppCompatActivity() {
                 binding.edtMobileNo.error = "enter mobile no"
 
             } else {
-                login()
+                startActivity(Intent(this,OtpVerificationActivity::class.java))
+
+                // login()
             }
         }
     }
 
-    private fun login() {
-        RetrofitClient.getInstance().userSignUp()
-            .enqueue(object : Callback<SignUpModel> {
-                override fun onResponse(call: Call<SignUpModel>, response: Response<SignUpModel>) {
-                    if (response.code() == 200) {
-                        if (response.body() != null){
+//    private fun login() {
+//        RetrofitClient.getInstance().userSignUp()
+//            .enqueue(object : Callback<SignUpModel> {
+//                override fun onResponse(call: Call<SignUpModel>, response: Response<SignUpModel>) {
+//                    if (response.code() == 200) {
+//                        if (response.body() != null){
+//
+//                        }else{
+//
+//                        }
+//                    } else {
+//
+//                    }
+//                }
+//
+//                override fun onFailure(call: Call<SignUpModel>, response: Throwable) {
+//
+//                }
+//
+//            })
+//    }
 
-                        }else{
 
-                        }
-                    } else {
-
-                    }
-                }
-
-                override fun onFailure(call: Call<SignUpModel>, response: Throwable) {
-
-                }
-
-            })
-    }
-
-
--}
+}
 
 

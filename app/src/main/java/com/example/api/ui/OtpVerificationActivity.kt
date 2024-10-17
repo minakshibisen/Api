@@ -1,5 +1,6 @@
 package com.example.api.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.provider.CalendarContract.Colors
 import android.text.Editable
@@ -9,8 +10,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.api.MainActivity
 import com.example.api.R
 import com.example.api.databinding.ActivityOtpVerificationBinding
+import kotlinx.coroutines.MainScope
 
 class OtpVerificationActivity : AppCompatActivity() {
     lateinit var binding: ActivityOtpVerificationBinding
@@ -26,6 +29,10 @@ class OtpVerificationActivity : AppCompatActivity() {
         setTextWatcher(binding.edtOne,  binding.edtTwo)
         setTextWatcher( binding.edtTwo,   binding.edtThree)
         setTextWatcher(  binding.edtThree,  binding.edtFour)
+        binding.verifyOtp.setOnClickListener{
+            startActivity(Intent(this, MainActivity::class.java))
+
+        }
 
 
     }

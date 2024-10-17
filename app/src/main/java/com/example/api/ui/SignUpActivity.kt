@@ -23,7 +23,10 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(binding.root)
         val phone: String? = intent.getStringExtra("phone")
 
+binding.Login.setOnClickListener {
+    startActivity(Intent(this@SignUpActivity,LoginActivity::class.java))
 
+}
         binding.signUp.setOnClickListener {
             if (binding.edtMobileNo.text.isNullOrEmpty() && binding.edtUserName.text.isNullOrEmpty()
             ) {
@@ -33,7 +36,9 @@ class SignUpActivity : AppCompatActivity() {
                 binding.edtMobileNo.requestFocus()
 
             } else {
-                signup()
+                startActivity(Intent(this@SignUpActivity,OtpVerificationActivity::class.java))
+
+              //  signup()
             }
         }
 

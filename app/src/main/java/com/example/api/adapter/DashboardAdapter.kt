@@ -23,7 +23,7 @@ class DashboardAdapter(dashboardActivity: DashboardActivity) : RecyclerView.Adap
     }
 
     override fun getItemCount(): Int {
-        return 0
+        return 2
     }
 
     class Viewholder(var binding: ItemDashboardBinding):RecyclerView.ViewHolder(binding.root){
